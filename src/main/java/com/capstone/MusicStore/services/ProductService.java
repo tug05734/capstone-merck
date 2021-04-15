@@ -3,8 +3,10 @@ package com.capstone.MusicStore.services;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,8 +29,7 @@ public class ProductService {
     {
        
         List<Product> result = new ArrayList<Product>();
-
-
+ 
         for (Product p : productRepository.findAll()) {
             if (p.getProductName().toLowerCase().contains(keyword.toLowerCase()) && !result.contains(p)) {
                 result.add(p);
