@@ -59,7 +59,7 @@ public class CartController {
 	@RequestMapping(value="/cartView", method= RequestMethod.GET)
 	public ModelAndView getCartView() {
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("cart/cart");
+		mav.setViewName("Cart/cart");
 		return mav;
 	}
 	
